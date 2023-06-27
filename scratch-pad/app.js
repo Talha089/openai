@@ -1,6 +1,6 @@
 const API_KEY = "";
 async function fetchData() {
-    const response = await fetch("https://api.openai.com/v1/completions",
+    const response = await fetch("https://api.openai.com/v1/chat/completions",
         {
             method: "POST",
             headers: {
@@ -8,8 +8,11 @@ async function fetchData() {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                model: "text-davinci-003",
-                prompt: "How are you today?",
+                model: "gpt-4",
+                messages: [{
+                    role: "user",
+                    content: "Hello!"
+                }],
                 max_tokens: 7 // optional-field
             })
         })
