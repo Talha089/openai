@@ -11,6 +11,7 @@ function changeInput(value) {
     inputElement.value = value;
 }
 
+
 async function getMessage() {
     try {
         const options = {
