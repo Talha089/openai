@@ -13,7 +13,6 @@ function changeInput(value) {
 
 async function getMessage() {
     try {
-
         const options = {
             method: 'POST',
             headers: {
